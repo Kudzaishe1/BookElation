@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="assets/Book_Page.css">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">       
+  <link rel="stylesheet" href="assets/fontawesome-free-5.10.2-web/css/all.css">
+</head>
+
+<body class="Page">
+
+  <!--loader code starts here-->
+  <script type='text/javascript'>
+    window.addEventListener("load", function () {
+      const loader = document.querySelector(".loader");
+      loader.className += " hidden";
+    });
+    window.history.pushState("", "",'/Book_Page');
+  </script>
+
+  <script>
+    function clicked()
+    {
+      Status = "<%=Details.Status%>";
+      if(Status === "Unavailable")
+      {
+        document.getElementById("Rsv_btn").disabled = true;
+        window.alert("Book is currently not Available");
+      }
+      else
+      {
+        window.alert("Book has been successfully reserved, a confirmation email has been sent");
+      }
+    }
+  </script>
+  
+  <!--loader code ends here-->
+  
+  <div class="loader"><img src="assets/loader14.gif" alt="loading..."></div>
+  
+  <div class="Top_Layout">
+        <img src="/assets/logo.gif" id="Logo">
+        <h1 >BookElation</h1>
+        <img src="assets/user_icon.png" id="User_icon">
+        <form action="/LogOut" method="POST"><button type="submit" class="sign_up_btn" name="Logout" value="LogOut">Sign Out</button></form>  
+  </div>
+  <div class="middle">
+    
+    <div class= image_and_availability>
+      <img id="Image" src="<%=Details.Book_url%>">
+      <div class="availability">
+        <div class="avail_border">
+          <h2><%=Details.Status%></h2>
+        </div>
+    </div>
+    </div>
+   
+    <div class = Book_content>
+      <h1><%=Details.Book_nam%></h1>
+      <h3>Author : <%=Details.author%></h3>
+      <h3>ISBN : <%=Details.Book_Id%></h3>
+      <h3>Description :</h3>
+      <p><%=Details.descript%></p>
+      <form method="POST"><button type="submit" class="reserve_btn" id="Rsv_btn" name ="RSV" value="<%=Details.Book_Id%>" onclick="clicked()">Reserve</button></form>
+    </div>
+  </div>
+  <div class="footer">
+      <div class="footer_content">
+          <h1>BookElation</h1>
+          <div class="mission_statement">
+          <p>We are a library website which people can use to reserve a book at the actual library.</p>
+          </div>
+          <div class="contact_heading">
+              <h2>Contact Information</h2>
+          </div>
+          <div class="footer_info">
+              <span><i class="fas fa-phone"></i> &nbsp; 012-345-6789</span>
+              <br>
+              <span><i class="fas fa-envelope"></i> &nbsp; info@BookElation.com</span>
+          </div>
+          <div class="sm_heading">
+              <h3>Social Media</h3>
+          </div>
+          <div class="sm_icons">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>                        <i class="fab fa-youtube"></i>
+          </div>
+      </div>
+      <div class="footer_copyright">
+          &copy; BookElation.com | Designed by Abdullah, Craig, Duwain, Jinwei, Kudzaishe and Sergio
+      </div>
+  </div>
+
+</body>

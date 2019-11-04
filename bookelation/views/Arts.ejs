@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Arts</title>
+    <link rel="stylesheet" href="assets/Arts.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">       
+    <link rel="stylesheet" href="assets/fontawesome-free-5.10.2-web/css/all.css">
+
+</head>
+
+<script>
+window.addEventListener('load', function(){
+      })
+      var Books = '<%=Image%>';
+      Books = Books.split(",");
+      window.onload = addElement;
+        function addElement () {
+                var count = 0;
+                while(count < Books.length)
+                {
+                        var URLLINK = Books[count].replace("{ Book_url:","").replace("&#39;","").replace("&#39; }","");
+                        var newContent = document.createElement("a");
+                        newContent.setAttribute("class","btn");
+                        newContent.setAttribute("href","/Book_Page?URL="+URLLINK.replace(" ",""));
+                        if(URLLINK !=="")
+                        {
+                            var Image_View = document.createElement("img");
+                            Image_View.setAttribute("class","Rows");
+                       
+                            Image_View.setAttribute("src",URLLINK);
+                            newContent.appendChild(Image_View);
+
+                            var currentDiv = document.getElementById('Mid_Layer');
+                            currentDiv.appendChild(newContent);
+                            console.log(currentDiv);
+                          count = count + 1;
+                        }
+                        else{break;}
+                       
+         }
+    }
+  </script>
+
+<body class="Body">
+  <!--loader code starts here-->
+  <script type='text/javascript'>
+    window.addEventListener("load", function () {
+      const loader = document.querySelector(".loader");
+      loader.className += " hidden";
+    });
+
+  </script>
+  
+  <div class="loader">
+      <img src="assets/Loading_Gifs/loader8.gif">
+  </div>
+  <!--loader code ends here-->
+
+  <div class="Top_Layout">
+    <img src="/assets/logo.gif" id="Logo">
+    <h1 >BookElation</h1>
+    <form class= "frm" action="/Search" method="POST">
+      <input id ="Search" size="33" type="text" placeholder="    Search using ISBN" name="Search_ID">
+      <input type="submit" name="submit" value="Search" id="Search_Button">
+    </form>
+    <img src="assets/user_icon.png" id="User_icon">
+    <form action="/LogOut" method="POST"><button type="submit" class="sign_up_btn" name="Logout" value="LogOut">Sign Out</button></form> 
+  </div>
+  <h1 id="HEADING">ARTS</h1>
+
+  <div id="Mid_Layer">
+
+  <div class="footer">
+    <div class="footer_content">
+        <h1>BookElation</h1>
+        <div class="mission_statement">
+        <p>We are a library website which people can use to reserve a book at the actual library.</p>
+        </div>
+        <div class="contact_heading">
+            <h2>Contact Information</h2>
+        </div>
+        <div class="footer_info">
+            <span><i class="fas fa-phone"></i> &nbsp; 012-345-6789</span>
+            <br>
+            <span><i class="fas fa-envelope"></i> &nbsp; info@BookElation.com</span>
+        </div>
+        <div class="sm_heading">
+            <h3>Social Media</h3>
+        </div>
+        <div class="sm_icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>                        <i class="fab fa-youtube"></i>
+        </div>
+    </div>
+    <div class="footer_copyright">
+        &copy; BookElation.com | Designed by Abdullah, Craig, Duwain, Jinwei, Kudzaishe and Sergio
+    </div>
+</div>
+
+</body>

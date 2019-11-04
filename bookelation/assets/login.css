@@ -1,0 +1,176 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body:before{
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(Background_Images/Login.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+}
+
+.quotes_content{
+    
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    background-color: black;
+    width: 350px;
+    height: 350px;
+    
+}
+.logo_avatar{
+    position: absolute;
+    left: 21%;
+    top: 5.2%;
+    height: 40px;
+    width: 40px;
+    
+}
+.quotes_content h2{
+    padding:0; /*ReadBliss*/
+    margin:0;
+    position: absolute;
+    top:7%;
+    left:35%;
+    color: white;
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    
+  } 
+
+.quotes_content h1{
+    color: white;
+    position: absolute;
+    top: 23%;
+    left:15%;
+}
+
+
+.quotes_content p{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left:22%;
+    width:150px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quotes_content h4{
+    color: white;
+    position: absolute;
+    top: 65%;
+    left:22%;
+    width:150px;
+    align-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.login_form{
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    background-color:white;
+    width: 350px;
+    height: 350px;
+    padding: 30px;
+    padding-top: 80px;
+    
+    
+}
+
+.user_account_avatar{
+    
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    top: calc(15px);
+    left: calc(50% - 40px);
+    
+}
+
+
+.login_form h2{
+    
+    margin: 0px;
+    padding: 30px;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    font-size:20px;
+    
+}
+#Email, #Password{
+
+    width: 100%;
+    margin-bottom: 0px;
+    align-content: center
+    
+}
+.login_form input[type=email], 
+.login_form input[type=password]{
+    
+    border: none;
+    border-bottom: 1px solid;
+    border-bottom-color: black;
+    background: transparent;
+    outline: none;
+    height: 35px;
+    color: black;
+    font-size: 12px;
+    
+}
+
+#Button{
+    
+    height: 30px;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    background: black;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    margin-top: 15%;
+
+    
+}
+
+#Button:hover, 
+#Button:focus{
+    
+    background:aquamarine;
+    color: black;
+    transition:0.2s;
+}
+
+.sign_up{
+    position: absolute;
+    top:78%;
+    left:44%;
+    color:black;
+    background:white;
+    text-decoration-color: black;
+}
+
+.sign_up:hover{
+    color:blue;
+    text-decoration-color: blue;
+}

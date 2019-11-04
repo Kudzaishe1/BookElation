@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Add Book</title>
+        
+        <link rel="stylesheet"href ="assets/admin_add_css.css">
+    </head>
+    
+    <body>
+
+            
+        <!--loader code starts here-->
+        <script type='text/javascript'>
+            window.addEventListener("load", function () {
+            const loader = document.querySelector(".loader");
+            loader.className += " hidden";
+            });
+        </script>
+                    
+        <div class="loader">
+            <img src="assets/Loading_Gifs/loader3.gif">
+        </div>
+        <!--loader code ends here-->
+        <form action="/LogOut" method="POST"><button type="submit" class="sign_up_btn" name="Logout" value="LogOut">Sign Out</button></form>
+        <div class = "Add-Books">
+            <form method="POST">
+                <h1>Add/Delete Books</h1>
+                <input type = "text" id = "book_name" placeholder="Book Name " name="Book_nam" required>
+                <input type = "text" id = "bookURL" placeholder="Book URL " name="Book_url"required>
+                <input type = "text" id = "book_id" placeholder="Book ID " name="Book_Id"required>
+                <input type = "text" id = "Author" placeholder="Author " name="author" required>
+                <input type = "number" id = "Edition" placeholder="Edition" name="ed" required>
+                <input type = "text" id = "cat" placeholder="Category" name="Category" required>
+                <input type = "text" id = "description" placeholder="Description" name="descript" maxlength="1500" required>
+                <button type= "submit"  id="add_book" name="add_button" value="true"> Add</button>
+            </form>
+            
+        
+         </div>
+        
+        
+        <div class = "Return">
+            <form action="/returns" method="POST">
+                <h1>Books Returned</h1>
+                <input type = "text" id = "book_name" placeholder="Book Name ", name="book_return" required>
+                <input type = "text" id = "book_id" placeholder="Book ID " name="Book_idreturn" required>
+                <input type = "text" id = "librarian" placeholder="librarian" name="Librarian" required>
+                <button type= "submit"  id="return" name= "return_but" value="return"> Returned</button>
+            </form>
+        </div>
+        <form action="/Report" method="POST"><button type= "submit" action="/Report" id="print_report" name="print_report" value="print"> Print Report</button></form>
+         </div class="delete">
+            <form method="POST">
+                    <input type = "text" id = "book_id_del" placeholder="Book ID " name="Book_Id"required>
+                    <button type= "submit" id="delete_books" name ="delete_but" value ="true"> Delete</button>
+
+            </form>
+         <div>
+
+         </div>
+
+     </body>

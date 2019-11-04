@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="assets/SignupCSS.css">
+        <script src="assets/Validation.js"></script>
+    </head>
+    <body>
+        <div id="Division">
+            <h1><%=Error%></h1>
+
+        </div>
+        <form id="form" method="POST">
+
+            <input type="text" id="Name" placeholder="First Name" name="Name" required><br>
+
+            <input type="text" id="Surname" placeholder ="Surname" name="Surname" required><br>
+
+            <input type="text" id="Birth" placeholder= "D.O.B" name="DateOfBirth"><br>
+
+            <input type="text" id="Address" placeholder="Address" name="Address"><br>
+
+            <input type="email" id="Email" placeholder="Email" name="Email" required><br>
+
+            <input type="number" id="Phone" placeholder="Phone Number" name="Phone_Number" required><br>
+
+            <input type="password" id="Password" placeholder="Password" name="Password" required><br>
+
+            <input type="password" id="Confirm" placeholder="Confirm Password" name="Confirm_Password"required><br>
+
+            <input type="submit" id ="Button" value="Sign Up" style="font-size: 20px" onclick="Match()">
+        </form>
+        <a id ="Sign_In_Link" href="/">Click here to sign in</a>
+    </body>
+</html>

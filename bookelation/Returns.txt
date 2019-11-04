@@ -1,0 +1,14 @@
+
+ _id: 5d7e343e281dd027886990bc,
+  Book_idreturn: '9781408839997',
+  return_date: 'September 15th 2019, 2:53:18 pm',
+  User_Email: '3750046@myuwc.ac.za',
+  Librarian: 'Kudzi',
+  __v: 0 
+
+ _id: 5d7e37d6ca07dc4004d418ee,
+  Book_idreturn: '9781681774596',
+  return_date: 'September 15th 2019, 3:08:38 pm',
+  User_Email: '3750046@myuwc.ac.za',
+  Librarian: 'Kudzi',
+  __v: 0 }

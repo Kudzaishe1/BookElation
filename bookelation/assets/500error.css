@@ -1,0 +1,29 @@
+i {
+	position: relative;
+	left: 200px;
+	top: 100px;
+}
+
+
+img {
+	position: relative;
+	left: 210px;
+	top: 118px;
+}
+
+h1 {
+	position: relative;
+	left: 200px;
+	top: 100px;
+}
+
+p {
+	position: relative;
+	left: 200px;
+	top: 100px;
+}
+
+div.img {
+	position: relative;
+	left: 100px;
+}
